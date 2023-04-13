@@ -1,0 +1,98 @@
+//colors
+$tan: #D2B48C;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $tan;
+  text-align: center;
+}
+button {
+  background-color: $tan;
+  border: none;
+  margin: 0 5px;
+  box-sizing: border-box;
+}
+button:hover {
+  cursor: pointer;
+}
+.decrement {
+  position: relative;
+  top: -2px;
+}
+.length-control {
+  display: inline-block;
+  width: 250px;
+  margin: 15px 0;
+}
+.timer-circle {
+  fill: none;
+  stroke: none;
+}
+.timer-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+.timer-path-remaining {
+  /* Just as thick as the original ring */
+  stroke-width: 7px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+}
+.timer-svg {
+  /* Flips the svg and makes the animation to move left-to-right */
+  transform: scaleX(-1);
+}
+#time-left, .timer-buttons, #timer-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+#time-left {
+  top: 0;
+  justify-content: center;
+  font-size: 48px;
+  width: 300px;
+  height: 300px;
+}
+#timer-label, .timer-buttons {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timer-buttons {
+  top: 65%;
+  justify-content: space-between;
+  width: 70px;
+}
+#timer-label {
+  top: 25%;
+  font-size: 30px;
+  font-weight: 700;
+}
+#break-length, #session-length {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+#container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+#Timer {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
