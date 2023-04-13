@@ -14,9 +14,12 @@ button {
   border: none;
   margin: 0 5px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 button:hover {
   cursor: pointer;
+  transform: scale(1.2);
+  color: white;
 }
 .decrement {
   position: relative;
